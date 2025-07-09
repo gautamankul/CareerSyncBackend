@@ -70,23 +70,28 @@ WSGI_APPLICATION = 'careersync.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'careersync',
+#         'ENFORCE_SCHEMA': False,
+#         'MONGODB_AUTOMATIC_REFERENCING': True,
+#         'CLIENT': {
+#             'host': 'mongodb+srv://gautam_db:Careersync2795@cluster0.2kwad.mongodb.net/careersync?retryWrites=true&w=majority',
+#             'username': 'gautam_db',
+#             'password': 'Careersync2795',
+#             'authMechanism': 'SCRAM-SHA-1',
+#             'tls': True,
+#         }
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'careersync',
-        'ENFORCE_SCHEMA': False,
-        'MONGODB_AUTOMATIC_REFERENCING': True,
-        'CLIENT': {
-            'host': 'mongodb+srv://gautam_db:Careersync2795@cluster0.2kwad.mongodb.net/careersync?retryWrites=true&w=majority',
-            'username': 'gautam_db',
-            'password': 'Careersync2795',
-            'authMechanism': 'SCRAM-SHA-1',
-            'tls': True,
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
 
 
 
